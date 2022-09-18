@@ -1,0 +1,83 @@
+[reserved_word, include] [Relational_Op, <] [Id, 1, stdio.h] [Relational_Op, >]
+[reserved_word, include] [Relational_Op, <] [Id, 2, conio.h] [Relational_Op, >]
+ 
+[reserved_word, void] [Id, 3, CalculoMedia] [l_paren, (] [r_paren, )]
+[l_bracket, {]
+[reserved_word, float] [Id, 4, NotaDaP1] [comma, ,] [Id, 5, NotaDaP2] [semicolon, ;]
+[reserved_word, float] [Id, 6, Media] [semicolon, ;]
+ 
+[Id, 7, clrscr] [l_paren, (] [r_paren, )] [semicolon, ;]
+[Id, 4, NotaDaP1] [equal, =] [num, 6.6] [semicolon, ;]
+[Id, 5, NotaDaP2] [equal, =] [num, 8.2] [semicolon, ;]
+ 
+[Id, 6, Media] [equal, =] [l_paren, (] [Id, 4, NotaDaP1] [Arith_Op, +] [Id, 5, NotaDaP2] [r_paren, )] [Arith_Op, /] [num, 2.0] [semicolon, ;]
+ 
+[Id, 8, printf] [l_paren, (] [string_literal, Média Final : %6.3f] [comma, ,] [Id, 6, Media] [r_paren, )] [semicolon, ;]
+ 
+[Id, 9, getch] [l_paren, (] [r_paren, )] [semicolon, ;]
+[r_bracket, }]
+ 
+[reserved_word, int] [Id, 10, VerificaNumero] [l_paren, (] [r_paren, )]
+[l_bracket, {]
+[reserved_word, int] [Id, 11, num] [semicolon, ;]
+[reserved_word, string] [Id, 12, s] [semicolon, ;]
+ 
+[Id, 8, printf] [l_paren, (] [string_literal, Digite um número: ] [r_paren, )] [semicolon, ;]
+[Id, 13, scanf] [l_paren, (] [string_literal, %d] [comma, ,] [logic_op, &] [Id, 11, num] [r_paren, )] [semicolon, ;]
+ 
+[reserved_word, if] [l_paren, (] [Id, 11, num] [Relational_Op, >] [num, 10.0] [r_paren, )]
+[l_bracket, {]
+[Id, 8, printf] [l_paren, (] [string_literal,  O número é maior que 10] [r_paren, )] [semicolon, ;]
+[Id, 12, s] [equal, =] [string_literal, errou] [semicolon, ;]
+[r_bracket, }]
+[reserved_word, if] [l_paren, (] [Id, 11, num] [Relational_Op, ==] [num, 10.0] [r_paren, )]
+[l_bracket, {]
+[Id, 8, printf] [l_paren, (] [string_literal,  Você acertou!] [r_paren, )] [semicolon, ;]
+[Id, 8, printf] [l_paren, (] [string_literal, O numero é igual a 10.] [r_paren, )] [semicolon, ;]
+[Id, 12, s] [equal, =] [string_literal, acertou] [semicolon, ;]
+[r_bracket, }]
+[reserved_word, if] [l_paren, (] [Id, 11, num] [Relational_Op, <] [num, 10.0] [r_paren, )]
+[l_bracket, {]
+[Id, 8, printf] [l_paren, (] [string_literal,  O número é menor que 10] [r_paren, )] [semicolon, ;]
+[Id, 12, s] [equal, =] [string_literal, errou] [semicolon, ;]
+[r_bracket, }]
+[reserved_word, if] [l_paren, (] [Id, 11, num] [Relational_Op, ==] [num, 10.0] [logic_op, &&] [Id, 12, s] [Relational_Op, ==] [string_literal, acertou] [r_paren, )]
+[l_bracket, {]
+[reserved_word, return] [num, 1.0] [semicolon, ;]
+[r_bracket, }]
+[reserved_word, return] [num, 0.0] [semicolon, ;]
+[r_bracket, }]
+[reserved_word, void] [Id, 14, AlterarVetor] [l_paren, (] [reserved_word, int] [Arith_Op, *] [Id, 15, vetor] [comma, ,] [reserved_word, int] [Id, 16, elementos] [r_paren, )]
+[l_bracket, {]
+[reserved_word, int] [Id, 17, i] [semicolon, ;]
+ 
+[reserved_word, if] [l_paren, (] [Id, 15, vetor] [logic_op, !=] [reserved_word, NULL] [r_paren, )]
+[l_bracket, {]
+[reserved_word, for] [l_paren, (] [Id, 17, i] [equal, =] [num, 0.0] [semicolon, ;] [Id, 17, i] [Relational_Op, <] [Id, 16, elementos] [semicolon, ;] [Id, 17, i] [Arith_Op, +] [Arith_Op, +] [r_paren, )]
+[l_bracket, {]
+[Arith_Op, *] [l_paren, (] [Id, 15, vetor] [r_paren, )] [equal, =] [Arith_Op, *] [l_paren, (] [Id, 15, vetor] [r_paren, )] [Arith_Op, *] [num, 2.0] [semicolon, ;]
+[Id, 15, vetor] [Arith_Op, +] [Arith_Op, +] [semicolon, ;]
+[r_bracket, }]
+[r_bracket, }]
+[r_bracket, }]
+ 
+[reserved_word, int] [Id, 18, main] [l_paren, (] [r_paren, )]
+[l_bracket, {]
+[reserved_word, int] [Id, 19, v] [equal, =] [l_bracket, {] [num, 5.0] [comma, ,] [num, 10.0] [comma, ,] [num, 15.0] [comma, ,] [num, 3.0] [comma, ,] [num, 10.0] [comma, ,] [num, 76.0] [comma, ,] [num, 5.0] [comma, ,] [num, 13.0] [comma, ,] [num, 33.0] [comma, ,] [num, 45.0] [r_bracket, }] [semicolon, ;]
+[reserved_word, int] [Arith_Op, *] [Id, 20, pt] [semicolon, ;]
+[reserved_word, int] [Id, 17, i] [semicolon, ;]
+ 
+[Id, 20, pt] [equal, =] [Id, 19, v] [semicolon, ;]
+ 
+[Id, 14, AlterarVetor] [l_paren, (] [Id, 19, v] [comma, ,] [num, 10.0] [r_paren, )] [semicolon, ;]
+ 
+[reserved_word, for] [l_paren, (] [reserved_word, int] [Id, 17, i] [equal, =] [num, 0.0] [semicolon, ;] [Id, 17, i] [Relational_Op, <] [num, 10.0] [semicolon, ;] [Id, 17, i] [Arith_Op, +] [Arith_Op, +] [r_paren, )]
+[l_bracket, {]
+[Id, 8, printf] [l_paren, (] [string_literal, V[%i] = %i] [comma, ,] [Id, 17, i] [comma, ,] [Arith_Op, *] [l_paren, (] [Id, 20, pt] [Arith_Op, +] [Id, 17, i] [r_paren, )] [r_paren, )] [semicolon, ;]
+[r_bracket, }]
+ 
+[Id, 3, CalculoMedia] [l_paren, (] [r_paren, )] [semicolon, ;]
+[Id, 10, VerificaNumero] [l_paren, (] [r_paren, )] [semicolon, ;]
+ 
+[reserved_word, return] [num, 0.0] [semicolon, ;]
+[r_bracket, }]
